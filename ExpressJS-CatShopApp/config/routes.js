@@ -5,5 +5,5 @@ module.exports = (app) => {
     app.get('/', homeController.homeGet);
 
     app.get('/user/register', userController.registerGet);
-    
+
 };
