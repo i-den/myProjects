@@ -1,8 +1,9 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*Background Cate*/
+html {
+  background: url(./../images/cat-background.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+h2 {
+
 }
