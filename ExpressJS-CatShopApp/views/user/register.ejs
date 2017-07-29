@@ -1,1 +1,53 @@
-<h2>Parti</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/javascripts/jquery-3.2.1.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel='stylesheet' href='/stylesheets/register.css'/>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <title></title>
+</head>
+<body>
+<div id="index-body">
+        <div class="col-sm-5 pull-right">
+            <form role="form" method="post" action="/user/register">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <!--FIRST NAME-->
+                            <input name="first_name" id="first_name" class="form-control input-lg"
+                                   placeholder="First Name" tabindex="1">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <!--LAST NAME-->
+                            <input name="last_name" id="last_name" class="form-control input-lg"
+                                   placeholder="Last Name" tabindex="2">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--EMAIL-->
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                </div>
+                <div class="form-group">
+                    <!--PASSWORD-->
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Password" tabindex="4">
+                </div>
+                <div class="form-group">
+                    <!--PHYSICAL ADDRESS-->
+                    <input class="form-control input-lg" placeholder="Physical Address" tabindex="4">
+                </div>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,18 +4,24 @@
       <script src="/javascripts/jquery-3.2.1.js"></script>
       <script src="/javascripts/bootstrap.js"></script>
       <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel='stylesheet' href='/stylesheets/login.css' />
       <link rel="icon" type="image/png" href="/images/favicon.png">
     <title><%= title %></title>
   </head>
-<body id="index-body">
-<div class="login">
-    <h1>Login</h1>
-    <form method="post" action="/user/login">
-        <input type="text" name="u" placeholder="Username" required="required" />
-        <input type="password" name="p" placeholder="Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Access Shop</button>
-    </form>
-</div>
-</body>
+  <header>
+
+  </header>
+    <body id="index-body">
+        <div class="login">
+            <h1>Login</h1>
+            <form method="post" action="/user/login">
+                <input type="text" name="inputUsername" placeholder="Username" required="required" />
+                <input type="password" name="inputPassword" placeholder="Password" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Access Shop</button>
+            </form>
+            <div id="register-cat-icon">
+                <a href="/user/register">Register<img src="/images/register.ico"></a>
+            </div>
+        </div>
+    </body>
 </html>

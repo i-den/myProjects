@@ -1,6 +1,5 @@
-/*Background Cate*/
 html {
-  background: url(./../images/cat-background.jpg) no-repeat center center fixed;
+  background: url(./../images/cat-background-login.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -46,4 +45,24 @@ input {
     box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
     transition: box-shadow .5s ease;
 }
+
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+#register-cat-icon {
+    text-align: right;
+}
+
+#register-cat-icon img {
+    width: 15%;
+    height: 15%;
+    float: right;
+}
+
+#register-cat-icon a {
+    height: 100px;
+    width: 100px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

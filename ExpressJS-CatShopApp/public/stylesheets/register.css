@@ -1,0 +1,8 @@
+html {
+    background: url(./../images/cat-background-register.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#index-body {
+    margin: 7% 1% 0 0;
+}
