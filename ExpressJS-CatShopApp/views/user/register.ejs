@@ -13,38 +13,65 @@
         <div class="col-sm-5 pull-right">
             <form role="form" method="post" action="/user/register">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <!--FIRST NAME-->
-                            <input name="first_name" id="first_name" class="form-control input-lg"
-                                   placeholder="First Name" tabindex="1">
+                            <input name="firstName" class="form-control input-lg"
+                                   placeholder="First Name" tabindex="1"
+                                    <% if (typeof registerArguments == 'object' && registerArguments) { %>
+                                        value="<%=registerArguments.firstName%>"
+                                    <% } %>>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <!--LAST NAME-->
-                            <input name="last_name" id="last_name" class="form-control input-lg"
-                                   placeholder="Last Name" tabindex="2">
+                            <input name="lastName" id="lastName" class="form-control input-lg"
+                                   placeholder="Last Name" tabindex="2"
+                                    <% if (typeof registerArguments == 'object' && registerArguments) { %>
+                                         value="<%=registerArguments.lastName%>"
+                                    <% } %>>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <!--EMAIL-->
-                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4"
+                            <% if (typeof registerArguments == 'object' && registerArguments) { %>
+                                value="<%=registerArguments.email%>"
+                            <% } %>>
                 </div>
                 <div class="form-group">
                     <!--PASSWORD-->
-                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Password" tabindex="4">
+                    <input type="password" name="password" class="form-control input-lg" placeholder="Password" tabindex="4">
+                </div>
+                <div class="form-group">
+                    <!--REPEAT-->
+                    <input type="password" name="repeatedPassword" class="form-control input-lg" placeholder="Repeat Password" tabindex="4">
                 </div>
                 <div class="form-group">
                     <!--PHYSICAL ADDRESS-->
-                    <input class="form-control input-lg" placeholder="Physical Address" tabindex="4">
+                    <input class="form-control input-lg" name="address" placeholder="Physical Address" tabindex="4"
+                            <% if (typeof registerArguments == 'object' && registerArguments) { %>
+                                value="<%=registerArguments.address%>"
+                            <% } %>>
+                </div>
+                <div class="form-group">
+                    <!--PHYSICAL ADDRESS-->
+                    <input class="form-control input-lg" name="phoneNumber" placeholder="Phone Number" tabindex="4"
+                            <% if (typeof registerArguments == 'object' && registerArguments) { %>
+                           value="<%=registerArguments.phoneNumber%>"
+                            <% } %>>
                 </div>
                 <hr class="colorgraph">
                 <div class="row">
                     <div class="col-xs-12">
                         <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg">
+                        <% if (typeof registerArguments == 'object' && registerArguments) { %>
+                        <button class="btn disabled btn-danger col-xs-12 col-sm-12 col-md-12"><%=registerArguments.error%></button>
+                        <% } %>
                     </div>
+
                 </div>
             </form>
         </div>
