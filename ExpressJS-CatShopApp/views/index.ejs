@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <script src="/javascripts/jquery-3.2.1.js"></script>
-      <script src="/javascripts/bootstrap.js"></script>
-      <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-      <link rel='stylesheet' href='/stylesheets/login.css' />
-      <link rel="icon" type="image/png" href="/images/favicon.png">
-    <title><%= title %></title>
-  </head>
+<% include ./partials/header.ejs %>
   <header>
 
   </header>
@@ -23,5 +14,4 @@
                 <a href="/user/register">Register<img src="/images/register.ico"></a>
             </div>
         </div>
-    </body>
-</html>
+    <% include ./partials/footer.ejs  %>
