@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+/ExpressJS-CatShopApp/node_modules/
+/ExpressJS-CatShopApp/.idea/
