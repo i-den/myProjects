@@ -1,5 +1,5 @@
 module.exports = {
     homeGet: (req, res) => {
-        res.render('index', {title: 'Cat Store'});
+        res.render('index', {title: 'Cat Store', css: 'login.css'});
     }
 };

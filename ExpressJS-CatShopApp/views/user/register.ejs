@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="/javascripts/jquery-3.2.1.js"></script>
-    <script src="/javascripts/bootstrap.js"></script>
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-    <link rel='stylesheet' href='/stylesheets/register.css'/>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <title></title>
-</head>
-<body>
+<% include ../partials/header.ejs %>
 <div id="index-body">
         <div class="col-sm-5 pull-right">
             <form role="form" method="post" action="/user/register">
@@ -76,5 +66,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+<% include ../partials/footer.ejs %>
