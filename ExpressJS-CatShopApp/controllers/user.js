@@ -3,7 +3,10 @@ const encryption = require('./../utilities/encryption');
 
 module.exports = {
     registerGet: (req, res) => {
-        res.render('user/register', {title: 'register yourself',css: 'register.css'});
+        res.render('user/register', {
+            title: 'register yourself',
+            css: 'register.css'
+        });
     },
     registerPost: (req, res) => {
         let registerArguments = req.body;
@@ -20,7 +23,9 @@ module.exports = {
            if(errorMessage) {
                registerArguments.error = errorMessage;
                res.render('user/register', {
-                   registerArguments: registerArguments
+                   registerArguments: registerArguments,
+                   title: 'register yourself',
+                   css: 'register.css'
                });
            } else {
                 let salt = encryption.generateSalt();
@@ -41,7 +46,9 @@ module.exports = {
                         if(err) {
                             registerArguments.error  = err.message;
                             res.render('user/register', {
-                                registerArguments: registerArguments
+                                registerArguments: registerArguments,
+                                title: 'register yourself',
+                                css: 'register.css'
                             });
                         } else {
                             res.redirect('/');
