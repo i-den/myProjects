@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const passportLocalMongoose = require("passport-local-mongoose");
+const passportLocalMongoose = require("passport-local");
 
 let UserSchema = mongoose.Schema(
     {
@@ -14,7 +14,7 @@ let UserSchema = mongoose.Schema(
     }
 );
 
-UserSchema.plugin(passportLocalMongoose);
+// UserSchema.plugin(passportLocalMongoose);
 
 //TODO: autheticate method must be refactored and placed in middleware
 UserSchema.method({

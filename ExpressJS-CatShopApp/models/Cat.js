@@ -7,14 +7,14 @@ let CatSchema = mongoose.Schema(
         breed: {type: String, required: true},
         color: {type: String, required: true},
         picture: {type: String, required: true},
-        price: {type: Number, required: true},
-        author: {
-                id: {
-                     type: mongoose.SchemaTypes.objectId,
-                     ref: "User"
-                },
-            username: {type: String}
-        }
+        price: {type: Number, required: true}
+        // author: {
+        //         id: {
+        //              type: mongoose.SchemaTypes.objectId,
+        //              ref: "User"
+        //         },
+        //     username: {type: String}
+        // }
     }
 );
 
