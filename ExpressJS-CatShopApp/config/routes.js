@@ -6,14 +6,17 @@ module.exports = (app) => {
     //INDEX - show login form, redirect to /cats/index if logged in
     app.get('/', homeController.homeGet);
 
+    /**
+    *USER ROUTES
+    */
     //GET USER REGISTER FORM
     app.get('/user/register', userController.registerGet);
 
     //REGISTER NEW USER
     app.post('/user/register', userController.registerPost);
 
-    /*
-    CAT ROUTES
+    /**
+    *CAT ROUTES
     */
 
     //VIEW ALL CATS
