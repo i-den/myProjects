@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const passportLocalMongoose = require("passport-local-mongoose");
 
-let userSchema = mongoose.Schema(
+let UserSchema = mongoose.Schema(
     {
         firstName: {type: String, required: true},
         lastName: {type: String, required: true},
@@ -13,7 +14,10 @@ let userSchema = mongoose.Schema(
     }
 );
 
-userSchema.method({
+UserSchema.plugin(passportLocalMongoose);
+
+//TODO: autheticate method must be refactored and placed in middleware
+UserSchema.method({
    authenticate: function (password) {
            let inputPasswordHash = encryption.hashPassword(password, this.salt);
            let isSamePasswordHash = inputPasswordHash === this.passwordHash;
@@ -22,6 +26,6 @@ userSchema.method({
    }
 });
 
-const User = mongoose.model('User', userSchema);
+let User = mongoose.model('User', UserSchema);
 
 module.exports = User;
