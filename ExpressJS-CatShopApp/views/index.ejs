@@ -5,11 +5,18 @@
     <body id="index-body">
         <div class="login">
             <h1>Login</h1>
-            <form method="post" action="/user/login">
+            <form method="post" action="/">
                 <input name="inputUsername" placeholder="Username" required />
                 <input type="password" name="inputPassword" placeholder="Password" required />
                 <button class="btn btn-primary btn-block btn-large">Access Shop</button>
             </form>
+            <% if (typeof error == 'string' && error) { %>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary btn-block disabled btn-danger btn-large"><%=error%></button>
+                </div>
+            </div>
+            <% } %>
             <div id="register-cat-icon">
                 <a href="/user/register">Register<img src="/images/register.ico"></a>
             </div>

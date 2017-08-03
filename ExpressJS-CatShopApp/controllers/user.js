@@ -1,4 +1,5 @@
-const User = require('./../models/User');
+const mongoose = require('mongoose');
+const User = mongoose.model('User');
 const encryption = require('./../utilities/encryption');
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
             css: 'register.css'
         });
     },
+
     registerPost: (req, res) => {
         let registerArguments = req.body;
         // vars: firstName, lastName, email, password, address, phoneNumber
@@ -56,6 +58,23 @@ module.exports = {
                     });
                 });
            }
+        });
+    },
+
+    profileGet: (req, res) => {
+        if (!req.isAuthenticated()) {
+            res.render('index', {
+                error: 'Please log in',
+                title: 'Cat Shop',
+                css: 'login.css'
+            });
+
+            return;
+        }
+
+        res.render('user/profile', {
+            title: 'Welcome!',
+            css: 'login.css'
         });
     }
 };
