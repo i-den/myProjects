@@ -63,18 +63,16 @@ module.exports = {
 
     profileGet: (req, res) => {
         if (!req.isAuthenticated()) {
-            res.render('index', {
-                error: 'Please log in',
-                title: 'Cat Shop',
-                css: 'login.css'
-            });
-
+            res.redirect('/');
             return;
         }
 
-        res.render('user/profile', {
-            title: 'Welcome!',
-            css: 'login.css'
+        User.findById(req.user.id).then(user => {
+            res.render('user/profile', {
+                user: user,
+                title: 'Welcome!',
+                css: 'profile.css'
+            });
         });
     }
 };

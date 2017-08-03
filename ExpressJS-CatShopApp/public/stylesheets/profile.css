@@ -1,0 +1,30 @@
+html {
+    background: url(./../images/background-profile.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    background-color: transparent;
+}
+
+body {
+    background-color: transparent;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+.z {
+    color: black;
+    background-color: white;
+    border: 1px blue solid;
+}
+
+.c {
+    padding: 0;
+}

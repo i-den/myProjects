@@ -1,3 +1,37 @@
 <% include ../partials/header.ejs %>
-<h1> HI </h1>
+<div class="container vertical-center">
+    <!--PROFILE-->
+    <div class="col-sm-2 col-xs-12 z">
+        <div>
+            <img src="http://www.gravatar.com/avatar/f6112e781842d6a2b4636b35451401ff?s=125" class="img-polaroid"/>
+        </div>
+        <h4>Name: <%= user.firstName + " " + user.lastName %></h4>
+        <h4>Email: <%= user.email %></h4>
+        <h4>Address: <%= user.address %></h4>
+        <h4>Phone: <%= user.phoneNumber %></h4>
+
+
+    </div>
+
+    <!--FOREACH CATS-->
+    <div class="col-sm-6 col-xs-12 col-sm-offset-1 z">
+        Listed Cats
+    </div>
+
+    <!--SETTINGS-->
+    <div class="col-sm-2 col-xs-12 col-sm-offset-1 z c">
+        <div>
+            <a href="/profile/edit" class="btn btn-primary btn-block">Edit Profile</a>
+        </div>
+        <div>
+            <a href="/market" class="btn btn-primary btn-block">Go Shopping</a>
+        </div>
+        <div>
+            <a href="/profile/add" class="btn btn-primary btn-block">Add Cat</a>
+        </div>
+        <div>
+            <a href="/logout" class="btn btn-primary btn-block">Logout</a>
+        </div>
+    </div>
+</div>
 <% include ../partials/footer.ejs %>
