@@ -17,7 +17,9 @@ const authenticateUser = (username, password, done) => {
     });
 };
 
-module.exports = () => {
+module.exports = (app) => {
+    app.use(passport.initialize());
+    app.use(passport.session());
     passport.use(new LocalPassport({
         usernameField: 'email',
         passwordField: 'password'
@@ -39,5 +41,8 @@ module.exports = () => {
 
             return done(null, user);
         })
-    })
+    });
+
+    // require('./strategies/google.strategy')();
+
 };

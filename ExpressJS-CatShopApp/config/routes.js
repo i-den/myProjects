@@ -3,17 +3,17 @@ const userController = require('./../controllers/user');
 const catsController = require('./../controllers/cats');
 
 module.exports = (app) => {
-    //INDEX - show login form, redirect to /cats/index if logged in
-    app.get('/', homeController.homeGet);
-
     /**
     *USER ROUTES
     */
     //GET USER REGISTER FORM
-    app.get('/user/register', userController.registerGet);
+    app.get('//register', userController.registerGet);
 
     //REGISTER NEW USER
-    app.post('/user/register', userController.registerPost);
+    app.post('//register', userController.registerPost);
+
+    //LOGIN WITH GOOGLE
+    app.post('');
 
     /**
     *CAT ROUTES

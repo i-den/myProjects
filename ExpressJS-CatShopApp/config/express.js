@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
+const index = require('./../routes/index');
+const register = require('./../routes/register');
 
 // Unused so far - Van
 // const favicon = require('serve-favicon');
@@ -31,6 +33,9 @@ module.exports = (app, config) => {
     // This makes the content in the "public" folder accessible for every user.
     app.use(express.static(path.join(config.rootFolder, 'public')));
 
+    //wtf
+    app.use('/', index);
+    app.use('/register', register);
 };
 
 
